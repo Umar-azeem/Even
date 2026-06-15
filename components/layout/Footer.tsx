@@ -9,7 +9,6 @@ export function Footer() {
     <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className=" grid grid-cols-1 md:grid-cols-2 justify-center gap-8 lg:gap-12">
-          {/* Company Info */}
           <div className="space-y-4 justify-center items-center w-full">
             <div>
               <Image
@@ -30,12 +29,12 @@ export function Footer() {
                 >
                   emilia@ldfloans.com
                 </a>
-                 <p className="text-blue-300 font-medium">NMLS #666953</p>
+                 <p className="text-blue-300 font-medium">NMLS: #666953</p>
               </div>
               <div>
                
               </div>
-              <div className="mt-4 items-center flex items-center justify-center gap-4  p-4 rounded-lg">
+              <div className="mt-4 items-center flex  justify-center gap-4  p-4 rounded-lg">
             <Link
               target="_blank"
               href="https://www.linkedin.com"
@@ -124,10 +123,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Contact Info */}
           
 
-          {/* Map Info */}
           <div className="space-y-4">
             <div className="flex items-center w-full gap-3">
               <div className="mb-8 w-full rounded-lg overflow-hidden border border-blue-400/30">
