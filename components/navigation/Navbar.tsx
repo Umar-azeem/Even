@@ -25,7 +25,6 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        
         {/* Logo */}
         <div className="relative w-20 h-20 md:w-40 md:h-20 flex-shrink-0">
           <Image
@@ -40,12 +39,7 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden sm:flex gap-6 lg:gap-8">
           {NAV_ITEMS.map((item) => (
-            <NavLink
-              key={item.href}
-              href={item.href}
-              label={item.label}
-              isActive={pathname === item.href}
-            />
+            <NavLink key={item.href} href={item.href} label={item.label} />
           ))}
         </nav>
 
@@ -54,8 +48,8 @@ export function Navbar() {
         {/* Mobile Menu - visible on small screens only */}
         <div className="sm:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <button aria-label="Open menu">
+            <SheetTrigger>
+              <button type="button" aria-label="Open menu">
                 <Menu className="w-6 h-6 text-[#021C2C]" />
               </button>
             </SheetTrigger>
@@ -73,13 +67,12 @@ export function Navbar() {
                 ))}
                 <Button className="w-full">Get Started</Button>
               </nav>
-              
             </SheetContent>
           </Sheet>
-
         </div>
-                          <Button className="bg-transparent hover:bg-transparent border border-gray-400 rounded-sm">English <ChevronDown className="w-4 h-4 ml-2" /></Button>
-
+        <Button className="bg-transparent hover:bg-transparent border border-gray-400 rounded-sm">
+          English <ChevronDown className="w-4 h-4 ml-2" />
+        </Button>
       </div>
     </header>
   );
