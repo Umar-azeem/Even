@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/dist/client/link';
 import Image from 'next/image';
 
 export function Hero() {
@@ -27,7 +28,7 @@ export function Hero() {
           Expanding Your Financial Horizon
         </p>
         <button className="bg-white/10 backdrop-blur-sm border border-white/40 text-white  px-4 sm:px-8 py-2 sm:py-3 rounded text-sm sm:text-base hover:bg-white/20 transition-colors duration-300 uppercase tracking-wider font-semibold animate-in fade-in slide-in-from-bottom duration-700 delay-300">
-          Get Started
+         <Link href="/contact">Get Started</Link>
         </button>
       </div>
     </section>

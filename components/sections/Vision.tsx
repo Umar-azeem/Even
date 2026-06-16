@@ -4,10 +4,10 @@ export function Vision() {
   return (
     <section id="vision" className="py-12 sm:py-16 lg:py-24 bg-white animate-in fade-in slide-in-from-bottom duration-700">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 text-center text-balance animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#04205D] mb-8 sm:mb-12 text-center text-balance animate-in fade-in slide-in-from-bottom duration-700 delay-100">
           Evan&apos;s Professional Vision
         </h2>
-        <div className="space-y-6 text-gray-700 text-base sm:text-lg leading-relaxed animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+        <div className="space-y-6 text-[#04205D] text-base sm:text-lg leading-relaxed animate-in fade-in slide-in-from-bottom duration-700 delay-200">
           <p>
             Driven by a deep commitment to the community and years of expertise in finance, I am dedicated to bringing integrity, clarity, and innovation to every mortgage transaction.
           </p>

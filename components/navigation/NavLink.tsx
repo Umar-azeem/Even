@@ -13,10 +13,10 @@ export function NavLink({ href, label, onClick }: NavLinkProps) {
     <Link
       href={href}
       onClick={onClick}
-      className="relative text-gray-700 hover:text-gray-900 transition-colors text-sm lg:text-base font-medium group"
+      className="relative text-[#04205D]  md:hover:text-gray-900 transition-colors text-sm md:text-xl font-medium group"
     >
       {label}
-      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-900 group-hover:w-full transition-all duration-300" />
+      <span className="hidden md:flex absolute bottom-0 left-0 w-0 h-0.5 bg-blue-900 group-hover:w-full transition-all duration-300" />
     </Link>
   );
 }
