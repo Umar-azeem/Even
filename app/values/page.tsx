@@ -134,7 +134,7 @@ export default function page() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full aspect-[4/3] max-w-md rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/img/eve.png"
+                  src="/img/hh.png"
                   alt="Evan Battaglia - Mortgage Loan Originator"
                   fill
                   className="object-cover"

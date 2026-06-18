@@ -49,7 +49,7 @@ export function Missions() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative rounded-md w-full aspect-square animate-in fade-in slide-in-from-bottom duration-700 delay-200">
               <Image
-                src="/img/eve.png"
+                src="/img/hh.png"
                 alt="Logo"
                 fill
                 className="object-contain rounded-md"

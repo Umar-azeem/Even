@@ -22,6 +22,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import Link from "next/link";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -33,9 +34,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <div className="relative w-20 h-20 md:w-40 md:h-20 flex-shrink-0">
+        <div className="relative w-30 h-24 md:w-40 md:h-20 flex-shrink-0">
           <Image
             src="/img/logo.png"
             alt="Logo"
@@ -70,37 +71,48 @@ export function Navbar() {
           align="center"
           className="w-[300px]  md:hidden mt-2 bg-white border border-gray-200 shadow-lg rounded-lg p-2"
         >
-          {/* Wrap everything in DropdownMenuGroup */}
           <DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            {NAV_ITEMS.map((item) => (
-              <DropdownMenuItem
-                key={item.href}
-                className="p-0 "
-                onSelect={handleNavClick}
-              >
-                <div className="w-full py-3 px-1 rounded-md ">
-                  <NavLink
-                    href={item.href}
-                    label={item.label}
-                    isActive={pathname === item.href}
-                    onClick={handleNavClick}
-                  />
-                </div>
-              </DropdownMenuItem>
-            ))}
+  <DropdownMenuSeparator />
 
-            <DropdownMenuSeparator />
+  {NAV_ITEMS.map((item) => (
+    <DropdownMenuItem
+      key={item.href}
+      className="p-0 focus:bg-transparent hover:bg-[#04205D] hover:text-white transition-colors duration-200 rounded-md"
+      onSelect={handleNavClick}
+    >
+      <Link
+        href={item.href}
+        className={`
+          block w-full px-4 py-3 text-sm font-medium rounded-md transition-colors duration-200
+          ${pathname === item.href 
+            ? 'text-[#04205D] bg-gray-100' 
+            : 'text-gray-700 hover:text-white hover:bg-[#04205D]'
+          }
+        `}
+        onClick={handleNavClick}
+      >
+        {item.label}
+      </Link>
+    </DropdownMenuItem>
+  ))}
 
-            <DropdownMenuItem
-              className="p-2 focus:bg-transparent"
-              onSelect={handleNavClick}
-            >
-              <Button className="w-full bg-[#021C2C] hover:bg-[#021C2C]/90 text-white">
-                Get Started
-              </Button>
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
+  <DropdownMenuSeparator />
+
+  <DropdownMenuItem
+    className="p-0 focus:bg-transparent hover:bg-transparent rounded-md"
+    onSelect={handleNavClick}
+  >
+    <Link
+      href="/contact"
+      className="block w-full"
+      onClick={handleNavClick}
+    >
+      <Button className="w-full bg-[#04205D] hover:bg-[#04205D]/90 text-white font-semibold rounded-md">
+        Get Started
+      </Button>
+    </Link>
+  </DropdownMenuItem>
+</DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

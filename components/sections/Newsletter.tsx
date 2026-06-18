@@ -26,7 +26,7 @@ export function Newsletter() {
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`
     );
     window.open(
-      `mailto:emilia@ldfloans.com?subject=${emailSubject}&body=${emailBody}`,
+      `mailto:chmairbnb@outlook.com?subject=${emailSubject}&body=${emailBody}`,
       '_blank'
     );
 
@@ -46,8 +46,8 @@ export function Newsletter() {
             <p className="text-gray-600 mb-2">Your email client has been opened.</p>
             <p className="text-gray-500 text-sm mb-6">
               If it didn't open, please contact Evan directly at{' '}
-              <a href="mailto:emilia@ldfloans.com" className="text-[#04205D] underline">
-                emilia@ldfloans.com
+              <a href="mailto:chmairbnb@outlook.com" className="text-[#04205D] underline">
+                chmairbnb@outlook.com
               </a>
             </p>
             <Button
@@ -75,11 +75,11 @@ export function Newsletter() {
         {/* Email Contact Badge */}
         <div className="flex justify-center mb-8">
           <a
-            href="mailto:emilia@ldfloans.com"
+            href="mailto:chmairbnb@outlook.com"
             className="flex items-center gap-2 text-sm text-gray-600 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition-colors"
           >
             <Mail className="w-4 h-4" />
-            emilia@ldfloans.com
+            chmairbnb@outlook.com
           </a>
         </div>
 

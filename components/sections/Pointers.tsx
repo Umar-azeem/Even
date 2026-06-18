@@ -12,7 +12,7 @@ const POINTERS = [
     id: 2,
     title: " Meet Evan Mortgage Advisor",
     description: " believe getting a mortgage shouldn't feel overwhelmin",
-    image: "/img/eve.png",
+    image: "/img/hh.png",
   },
   {
     id: 3,

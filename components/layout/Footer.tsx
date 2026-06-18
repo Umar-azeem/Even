@@ -10,7 +10,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className=" grid grid-cols-1 md:grid-cols-2 justify-center gap-8 lg:gap-12">
           <div className="space-y-4 justify-center items-center w-full">
-            <div>
+            <div className="mb-8 w-full  flex justify-center items-center">
               <Image
                 src="/img/logos.png"
                 alt="even logo"
@@ -20,21 +20,32 @@ export function Footer() {
                 className="h-32 w-64 object-contain"
               />
             </div>
-            <div className="space-y-4">
-              <div className="flex justify-center items-center gap-3">
-                <Mail className="w-5 h-5 text-blue-300 flex-shrink-0" />
+            <div className="space-y-4 w-full">
+              <div className="flex flex-col justify-center items-center gap-3 ">
+             <div className="flex items-center justify-start gap-2">
+              <Mail className="w-5 h-5 text-blue-300 flex-shrink-0" />
                 <a
-                  href="mailto:emilia@ldfloans.com"
+                  href="mailto:chmairbnb@outlook.com"
                   className="text-blue-100 hover:text-white transition-colors duration-200"
                 >
-                  emilia@ldfloans.com
+                  chmairbnb@outlook.com
                 </a>
+              </div>   
+              <div className="flex  gap-2 ">
+                <Phone className="w-5 h-5 text-blue-300 flex-shrink-0" />
+                <a
+                  href="tel:+6309890215"
+                  className="text-blue-100 hover:text-white transition-colors duration-200"
+                >
+                  (630) 989-0215
+                </a>
+              </div>
                  <p className="text-blue-300 font-medium">NMLS: #666953</p>
               </div>
               <div>
                
               </div>
-              <div className="mt-4 items-center flex  justify-center gap-4  p-4 rounded-lg">
+              {/* <div className="mt-4 items-center flex  justify-center gap-4  p-4 rounded-lg">
             <Link
               target="_blank"
               href="https://www.linkedin.com"
@@ -119,7 +130,7 @@ export function Footer() {
                 </svg>
               </span>
             </Link>
-          </div>
+          </div> */}
             </div>
           </div>
 
