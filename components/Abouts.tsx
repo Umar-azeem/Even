@@ -2,10 +2,127 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Award, Home, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Award, Home, Users, CheckCircle, ArrowRight, Target, Eye, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 export default function Abouts() {
+  const [activeTab, setActiveTab] = useState('mission');
+
+  const tabs = [
+    {
+      id: 'mission',
+      label: 'Mission',
+      icon: Target,
+      content: (
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-[#04205D]">Our Mission</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our mission is to empower individuals and families to achieve their homeownership dreams by providing 
+            transparent, personalized, and accessible mortgage solutions. We are committed to guiding our clients 
+            through every step of the financing process with integrity, expertise, and a genuine dedication to 
+            their financial well-being.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <h4 className="font-semibold text-[#04205D] mb-2">Client-Centric Approach</h4>
+              <p className="text-gray-600 text-sm">Every client receives personalized attention and solutions tailored to their unique situation.</p>
+            </div>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <h4 className="font-semibold text-[#04205D] mb-2">Financial Empowerment</h4>
+              <p className="text-gray-600 text-sm">We educate and empower our clients to make informed decisions about their financial future.</p>
+            </div>
+          </div>
+           <a
+                  href="/mission"
+                  className="w-28 flex items-center  bg-[#04205D] text-white px-4 py-2 rounded-lg font-semibold  transition-colors"
+                >
+                  Read more
+                </a>
+        </div>
+      )
+    },
+    {
+      id: 'vision',
+      label: 'Vision',
+      icon: Eye,
+      content: (
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-[#04205D]">Our Vision</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            To be the most trusted and innovative mortgage lending partner, recognized for transforming the 
+            home financing experience through technology, transparency, and a deep commitment to community. 
+            We envision a world where every individual has access to fair, clear, and achievable paths to 
+            homeownership.
+          </p>
+          <div className="bg-[#04205D]/5 p-6 rounded-lg border border-[#04205D]/20 mt-4">
+            <h4 className="font-semibold text-[#04205D] mb-2">Looking Ahead</h4>
+            <p className="text-gray-700">
+              We&apos;re continuously evolving to meet the changing needs of our clients and the real estate market, 
+              ensuring that we remain at the forefront of the mortgage industry.
+            </p>
+          </div>
+           <a
+                  href="/vision"
+                  className="w-28 flex items-center  bg-[#04205D] text-white px-4 py-2 rounded-lg font-semibold  transition-colors"
+                >
+                  Read more
+                </a>
+        </div>
+      )
+    },
+    {
+      id: 'values',
+      label: 'Values',
+      icon: Heart,
+      content: (
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-[#04205D]">Our Values</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            These core values guide everything we do—from our client interactions to our business decisions 
+            and community involvement.
+          </p>
+          <div className="space-y-4 mt-4">
+            <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div className="w-8 h-8 bg-[#04205D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <CheckCircle className="w-4 h-4 text-[#04205D]" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-[#04205D]">Integrity</h4>
+                <p className="text-gray-600 text-sm">We operate with honesty, transparency, and ethical practices in everything we do.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div className="w-8 h-8 bg-[#04205D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <Users className="w-4 h-4 text-[#04205D]" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-[#04205D]">Excellence</h4>
+                <p className="text-gray-600 text-sm">We strive for excellence in service, knowledge, and client outcomes.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div className="w-8 h-8 bg-[#04205D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <Home className="w-4 h-4 text-[#04205D]" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-[#04205D]">Community</h4>
+                <p className="text-gray-600 text-sm">We believe in giving back and strengthening the communities we serve.</p>
+              </div>
+               
+            </div>
+            <a
+                  href="/values"
+                  className="w-28 flex items-center  bg-[#04205D] text-white px-4 py-2 rounded-lg font-semibold  transition-colors"
+                >
+                  Read more
+                </a>
+          </div>
+        </div>
+      )
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -133,52 +250,48 @@ export default function Abouts() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Mission, Vision, Values Tabs Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 text-[#04205D] font-semibold text-sm mb-2">
               <span className="w-8 h-0.5 bg-[#04205D]" />
-              MY COMMITMENT
+              OUR FOUNDATION
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#04205D] mb-4">
-              What I Stand For
+              Mission, Vision &amp; Values
             </h2>
             <p className="text-gray-600 text-lg">
-              Every client deserves a lender who is as invested in their homeownership goals as they are.
+              The principles that guide our work and define who we are.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-[#04205D]/10 rounded-lg flex items-center justify-center mb-4">
-                <CheckCircle className="w-6 h-6 text-[#04205D]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#04205D] mb-2">Clear Communication</h3>
-              <p className="text-gray-600">
-                No ghosting, no confusing updates. You&apos;ll know where your loan stands every step of the way.
-              </p>
-            </div>
+          {/* Tabs Navigation */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 border-b border-gray-200 pb-2">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex items-center gap-2 px-4 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-t-lg transition-all duration-200 ${
+                    activeTab === tab.id
+                      ? 'text-[#04205D] border-b-2 border-[#04205D] bg-[#04205D]/5'
+                      : 'text-gray-500 hover:text-[#04205D] hover:bg-gray-50'
+                  }`}
+                >
+                  <Icon className={`w-4 h-4 ${
+                    activeTab === tab.id ? 'text-[#04205D]' : 'text-gray-400'
+                  }`} />
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
 
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-[#04205D]/10 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-[#04205D]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#04205D] mb-2">Tailored Strategy</h3>
-              <p className="text-gray-600">
-                I don&apos;t do one-size-fits-all. Your loan is built around your goals, budget, and future plans.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-[#04205D]/10 rounded-lg flex items-center justify-center mb-4">
-                <Home className="w-6 h-6 text-[#04205D]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#04205D] mb-2">Local Expertise</h3>
-              <p className="text-gray-600">
-                As a Bloomingdale resident, I understand our market and what local buyers and investors face.
-              </p>
-            </div>
+          {/* Tab Content */}
+          <div className="bg-gray-50 rounded-xl p-6 sm:p-8 lg:p-10 min-h-[300px]">
+            {tabs.find(tab => tab.id === activeTab)?.content}
           </div>
         </div>
       </section>
