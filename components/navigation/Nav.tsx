@@ -58,7 +58,7 @@ export function Nav() {
         {/* Mobile Menu - visible on small screens only */}
         <div className="sm:hidden w-full flex justify-center">
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger >
               <Button variant="outline">Open</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-32">
@@ -68,12 +68,11 @@ export function Nav() {
                   onValueChange={setPosition}
                 >
                   {NAV_ITEMS.map((item) => (
-                    <DropdownMenuRadioItem value="top">
+                    <DropdownMenuRadioItem key={item.href} value={item.href}>
                       <div className="w-full py-3 px-1 rounded-md ">
                         <NavLink
                           href={item.href}
                           label={item.label}
-                          isActive={pathname === item.href}
                           onClick={handleNavClick}
                         />
                       </div>

@@ -23,13 +23,13 @@ export function Footer() {
             <div className="space-y-4 w-full">
               <div className="flex flex-col justify-center items-center gap-3 ">
              <div className="flex items-center justify-start gap-2">
-              <Mail className="w-5 h-5 text-blue-300 flex-shrink-0" />
+              {/* <Mail className="w-5 h-5 text-blue-300 flex-shrink-0" />
                 <a
                   href="mailto:chmairbnb@outlook.com"
                   className="text-blue-100 hover:text-white transition-colors duration-200"
                 >
-                  chmairbnb@outlook.com
-                </a>
+                 Email
+                </a> */}
               </div>   
               <div className="flex  gap-2 ">
                 <Phone className="w-5 h-5 text-blue-300 flex-shrink-0" />
@@ -40,7 +40,7 @@ export function Footer() {
                   (630) 989-0215
                 </a>
               </div>
-                 <p className="text-blue-300 font-medium">NMLS: #666953</p>
+                 <p className="text-blue-300 font-medium">NMLS: 1710678</p>
               </div>
               <div>
                
@@ -158,8 +158,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-blue-800 mt-8 pt-6 text-center">
           <p className="text-blue-300 text-sm">
-            © {new Date().getFullYear()} Loans Direct Funding LLC. All rights
-            reserved.
+           
           </p>
         </div>
       </div>
